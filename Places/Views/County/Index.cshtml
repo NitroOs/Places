@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Places.Models.County>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CountyName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountyName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CountyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CountyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CountyID })
+        </td>
+    </tr>
+}
+
+</table>

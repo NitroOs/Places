@@ -1,0 +1,22 @@
+﻿@model Places.Models.County
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>County</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CountyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CountyName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CountyID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
