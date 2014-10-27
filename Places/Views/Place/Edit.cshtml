@@ -1,0 +1,53 @@
+﻿@model Places.Models.Place
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Place</legend>
+
+        @Html.HiddenFor(model => model.PlaceID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlaceName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlaceName)
+            @Html.ValidationMessageFor(model => model.PlaceName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ZipCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ZipCode)
+            @Html.ValidationMessageFor(model => model.ZipCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CountyID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CountyID)
+            @Html.ValidationMessageFor(model => model.CountyID)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

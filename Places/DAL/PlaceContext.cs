@@ -11,10 +11,12 @@ namespace Places.DAL
     public class PlaceContext: DbContext
     {
         public DbSet<County> Countys { get; set; }
+        public DbSet<Place> Places { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer<PlaceContext>(null);
         }
     }
 }

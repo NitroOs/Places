@@ -184,6 +184,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CountyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="DAL\PlaceContext.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -196,6 +197,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\County.cs" />
+    <Compile Include="Models\Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -314,6 +316,11 @@
     <Content Include="Views\County\Create.cshtml" />
     <Content Include="Views\County\Edit.cshtml" />
     <Content Include="Views\County\Delete.cshtml" />
+    <Content Include="Views\Place\Index.cshtml" />
+    <Content Include="Views\Place\Details.cshtml" />
+    <Content Include="Views\Place\Create.cshtml" />
+    <Content Include="Views\Place\Edit.cshtml" />
+    <Content Include="Views\Place\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
