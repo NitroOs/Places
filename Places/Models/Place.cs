@@ -11,5 +11,7 @@ namespace Places.Models
         public string PlaceName { get; set; }
         public string ZipCode { get; set; }
         public int CountyID { get; set; }
+
+        public virtual County County { get; set; }
     }
 }
