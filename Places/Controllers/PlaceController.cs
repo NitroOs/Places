@@ -65,6 +65,9 @@ namespace Places.Controllers
         public ActionResult Edit(int id = 0)
         {
             Place place = db.Places.Find(id);
+            List<County> Countys = new List<County>();
+            Countys = db.Countys.ToList();
+            ViewBag.CountyList = new SelectList(Countys, "CountyID", "CountyName", place.CountyID);
             if (place == null)
             {
                 return HttpNotFound();
